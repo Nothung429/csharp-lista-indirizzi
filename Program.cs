@@ -2,7 +2,7 @@
 //In questo esercizio dovrete leggere un file CSV, che cambia poco da quanto appena visto nel live-coding in classe, e salvare tutti gli indirizzi contenuti al sul interno all’interno di una lista di oggetti istanziati a partire dalla classe Indirizzo.
 //Attenzione: gli ultimi 3 indirizzi presentano dei possibili “casi particolari” che possono accadere a questo genere di file: vi chiedo di pensarci e di gestire come meglio crediate queste casistiche.
 
-StreamReader fileAddress = File.OpenText("C:\\Users\\Francesco\\Desktop\\Dot Net Experis\\Tutorati\\Esercizio-7\\csharp-lista-indirizzi\\addresses.csv");
+StreamReader fileAddress = File.OpenText(@"../../../addresses.csv");
 List<Address> listAddress = new List<Address>();
 fileAddress.ReadLine();
 
@@ -29,7 +29,7 @@ while (!fileAddress.EndOfStream)
     }
     catch (Exception e)
     {
-        Console.WriteLine("Indirizzo non valido -->" + riga + "\n");
+        Console.WriteLine("\n" + "Indirizzo non valido -->" + riga + "\n");
     }
 }
 

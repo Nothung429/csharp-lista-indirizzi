@@ -17,15 +17,17 @@
     }
     public override string ToString()
     {
-        string line = "//-----------------Indirizzo-----------------//\n";
+        string line = "\n//~~~~~~~~~~~~~~~~~Indirizzo~~~~~~~~~~~~~~~~~//\n";
         line += "Nome: " + name + "\n";
         line += "Cognome: " + surname + "\n";
         line += "Indirizzo: " + street + "\n";
         line += "Città: " + city + "\n";
         line += "Provincia: " + province + "\n";
         line += "CAP: " + zip + "\n";
-        line += "//-----------------*********-----------------//\n";
+        line += "//~~~~~~~~~~~~~~~~~#########~~~~~~~~~~~~~~~~~//\n";
 
         return line;
     }
+
+
 }
