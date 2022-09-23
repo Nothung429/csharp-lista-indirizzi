@@ -10,9 +10,7 @@ while (!fileAddress.EndOfStream)
 {
     string riga = fileAddress.ReadLine();
 
-    //char[] 
-
-    string[] split = riga.Split(',');    
+    string[] split = riga.Split(',');
 
     try
     {
@@ -29,7 +27,16 @@ while (!fileAddress.EndOfStream)
     }
     catch (Exception e)
     {
-        Console.WriteLine("\n" + "Indirizzo non valido -->" + riga + "\n");
+        if(split.Length < 6)
+        {
+            Console.WriteLine($"\nIndirizzo non valido (informazioni mancanti)-->{riga}\n");
+        } else if(split.Length > 6)
+        {
+            Console.WriteLine($"\nIndirizzo non valido (informazioni in eccesso)-->{riga}\n");
+        } else
+        {
+            Console.WriteLine(e);
+        }
     }
 }
 
